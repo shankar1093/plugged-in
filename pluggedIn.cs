@@ -11,11 +11,11 @@ namespace AudioDetector
             var client = new WebClient();
             if (IsAudioPlaying(GetDefaultRenderDevice()))
             {
-                var content = client.DownloadString("https://slack.com/api/users.setPresence?token=xoxp-54759295125-54769515010-68598852724-7d87d91594&presence=away");
+                var content = client.DownloadString("https://slack.com/api/users.setPresence?token=<INSERT YOUR TOKEN>&presence=away");
             }
             else
             {
-                var content = client.DownloadString("https://slack.com/api/users.setPresence?token=xoxp-54759295125-54769515010-68598852724-7d87d91594&presence=auto");
+                var content = client.DownloadString("https://slack.com/api/users.setPresence?token=<INSERT YOUR TOKEN>&presence=auto");
             }
             Console.WriteLine(IsAudioPlaying(GetDefaultRenderDevice()));
             Console.ReadLine();
